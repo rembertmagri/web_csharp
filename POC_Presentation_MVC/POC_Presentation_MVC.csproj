@@ -197,10 +197,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\jQueryDatatables\jQueryDatatablesAreaRegistration.cs" />
+    <Compile Include="Areas\PureMVC\Controllers\ProductController.cs" />
+    <Compile Include="Areas\PureMVC\PureMVCAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Areas\jQueryDatatables\Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -551,6 +554,11 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="Areas\PureMVC\Views\web.config" />
+    <Content Include="Areas\PureMVC\Views\Product\Index.cshtml" />
+    <Content Include="Areas\PureMVC\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\jQueryDatatables\Views\web.config" />
+    <Content Include="Areas\jQueryDatatables\Views\_ViewStart.cshtml" />
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
@@ -1356,12 +1364,12 @@
     <None Include="Service References\ProductServiceReference\ProductService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Areas\jQueryDatatables\Views\Product\Index.cshtml" />
     <Content Include="Views\Product\Create.cshtml" />
     <Content Include="Views\Product\Read.cshtml" />
     <Content Include="Views\Product\Update.cshtml" />
     <Content Include="Views\Product\Delete.cshtml" />
-    <Content Include="Views\Product\_DataTables.cshtml" />
+    <Content Include="Areas\jQueryDatatables\Views\Product\_DataTables.cshtml" />
     <Content Include="Views\Product\_Create.cshtml" />
     <Content Include="Views\Product\_Delete.cshtml" />
     <Content Include="Views\Product\_Read.cshtml" />
@@ -1369,6 +1377,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\jQueryDatatables\Models\" />
+    <Folder Include="Areas\jQueryDatatables\Views\Shared\" />
+    <Folder Include="Areas\PureMVC\Models\" />
+    <Folder Include="Areas\PureMVC\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

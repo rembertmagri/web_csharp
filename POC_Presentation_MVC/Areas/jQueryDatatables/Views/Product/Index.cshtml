@@ -1,0 +1,15 @@
+﻿
+@model IEnumerable<POC_Presentation_MVC.Models.ProductModel>
+
+@{
+    ViewBag.Title = "Products Page";
+}
+
+@section scripts
+{
+    <script src="~/Scripts/Product/DataTable.js"></script>
+}
+
+<h3>List of Products</h3>
+
+@{ Html.RenderPartial("_DataTables"); }

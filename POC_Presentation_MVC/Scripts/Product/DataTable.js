@@ -6,7 +6,7 @@ $(document).ready(function () {
         searching: false,
         ordering:  false,
         ajax: {
-            url: '/Product/GetDataTable',
+            url: '/jQueryDatatables/Product/GetDataTable',
             type: 'GET'
         },
         "columns": [
@@ -28,7 +28,7 @@ $(document).ready(function () {
     $('#createNewjQuery').click(function (event) {
         var form, dialog;
         event.preventDefault();
-        $.get("/Product/CreateModal", function (data) {
+        $.get("/jQueryDatatables/Product/Create", function (data) {
             $('#renderModal').html(data);
             dialog = $("#renderModal").dialog({
                 width: 400,
@@ -41,7 +41,7 @@ $(document).ready(function () {
             });
             form = dialog.find("form").on("submit", function (event) {
                 event.preventDefault();
-                $.post('/Product/CreateAjax', form.serialize(), function (data) {
+                $.post('/jQueryDatatables/Product/Create', form.serialize(), function (data) {
                         dialog.dialog("close");
                         productsDataTable.draw(false);
                     },
@@ -53,7 +53,7 @@ $(document).ready(function () {
 });
 
 function ShowReadModal(id) {
-    $.get("/Product/ReadModal/" + id, function (data) {
+    $.get("/jQueryDatatables/Product/Read/" + id, function (data) {
         $('#renderModal').html(data);
         dialog = $("#renderModal").dialog({
             width: 400,
@@ -68,7 +68,7 @@ function ShowReadModal(id) {
 };
 
 function ShowUpdateModal(id) {
-    $.get("/Product/UpdateModal/" + id, function (data) {
+    $.get("/jQueryDatatables/Product/Update/" + id, function (data) {
         $('#renderModal').html(data);
         dialog = $("#renderModal").dialog({
             width: 400,
@@ -81,7 +81,7 @@ function ShowUpdateModal(id) {
         });
         form = dialog.find("form").on("submit", function (event) {
             event.preventDefault();
-            $.post('/Product/UpdateAjax', form.serialize(), function (data) {
+            $.post('/jQueryDatatables/Product/Update', form.serialize(), function (data) {
                     dialog.dialog("close");
                     productsDataTable.draw(false);
                 },
@@ -91,7 +91,7 @@ function ShowUpdateModal(id) {
 };
 
 function ShowDeleteModal(id) {
-    $.get("/Product/DeleteModal/" + id, function (data) {
+    $.get("/jQueryDatatables/Product/Delete/" + id, function (data) {
         $('#renderModal').html(data);
         dialog = $("#renderModal").dialog({
             width: 400,
@@ -104,7 +104,7 @@ function ShowDeleteModal(id) {
         });
         form = dialog.find("form").on("submit", function (event) {
             event.preventDefault();
-            $.post('/Product/DeleteAjax/'+id, form.serialize(), function (data) {
+            $.post('/jQueryDatatables/Product/Delete/' + id, form.serialize(), function (data) {
                 dialog.dialog("close");
                 productsDataTable.draw(false);
             },
