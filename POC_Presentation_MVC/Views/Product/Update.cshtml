@@ -1,0 +1,13 @@
+﻿@model POC_Presentation_MVC.Models.ProductModel
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update a Product</h2>
+
+@{ Html.RenderPartial("_Update"); }
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

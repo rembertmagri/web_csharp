@@ -1,0 +1,13 @@
+﻿@model POC_Presentation_MVC.Models.ProductModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete a Product</h2>
+
+@{ Html.RenderPartial("_Delete"); }
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
