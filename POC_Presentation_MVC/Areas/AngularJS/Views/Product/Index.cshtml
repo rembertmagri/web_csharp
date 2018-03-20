@@ -1,0 +1,14 @@
+﻿@model IEnumerable<POC_Presentation_MVC.Models.ProductModel>
+
+@{
+    ViewBag.Title = "Products Page";
+}
+
+@section scripts
+{
+    <script src="~/Areas/AngularJS/Scripts/Product/products.js"></script>
+}
+
+<div ng-app="pocAngular">
+    <div ng-view></div>
+</div>

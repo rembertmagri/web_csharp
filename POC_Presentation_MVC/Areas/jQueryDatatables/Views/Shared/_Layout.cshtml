@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@RenderBody()
+
+@section areaSpecificScripts
+{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jquery.datatables")
+    @Scripts.Render("~/bundles/jqueryui")
+}
+
+@section scripts
+{
+    @RenderSection("scripts", required: false)
+}

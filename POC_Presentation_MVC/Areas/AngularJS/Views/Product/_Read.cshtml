@@ -1,0 +1,41 @@
+﻿@model POC_Presentation_MVC.Models.ProductModel
+
+<div>
+    <h4>Details of the Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            {{product.Name}}
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            {{product.Price | currency}}
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            {{product.Quantity | number}}
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+
+        <dd>
+            {{UTIL.toJsDate(product.CreationDate) | date:'yyyy-MM-dd'}}
+        </dd>
+
+    </dl>
+</div>
+<a class="btn btn-info" href="#!/">Back to List</a>

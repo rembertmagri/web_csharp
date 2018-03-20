@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@RenderBody()
+
+@section areaSpecificScripts
+{
+    @Scripts.Render("~/bundles/angularjs")
+}
+
+@section scripts
+{
+    @RenderSection("scripts", required: false)
+}

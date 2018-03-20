@@ -197,6 +197,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\AngularJS\Controllers\ProductController.cs" />
+    <Compile Include="Areas\AngularJS\AngularJSAreaRegistration.cs" />
     <Compile Include="Areas\jQueryDatatables\jQueryDatatablesAreaRegistration.cs" />
     <Compile Include="Areas\PureMVC\Controllers\ProductController.cs" />
     <Compile Include="Areas\PureMVC\PureMVCAreaRegistration.cs" />
@@ -223,6 +225,7 @@
     <Compile Include="Utils\MVCModelToDTOUtil.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\AngularJS\Scripts\Product\products.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\DataTables\css\autoFill.bootstrap.css" />
@@ -559,6 +562,16 @@
     <Content Include="Areas\PureMVC\Views\_ViewStart.cshtml" />
     <Content Include="Areas\jQueryDatatables\Views\web.config" />
     <Content Include="Areas\jQueryDatatables\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\AngularJS\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\AngularJS\Views\Product\Index.cshtml" />
+    <Content Include="Areas\AngularJS\Views\web.config" />
+    <Content Include="Areas\AngularJS\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\jQueryDatatables\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\AngularJS\Views\Product\_Table.cshtml" />
+    <Content Include="Areas\AngularJS\Views\Product\_Read.cshtml" />
+    <Content Include="Areas\AngularJS\Views\Product\_Update.cshtml" />
+    <Content Include="Areas\AngularJS\Views\Product\_Delete.cshtml" />
+    <Content Include="Areas\AngularJS\Views\Product\_Create.cshtml" />
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
@@ -1309,7 +1322,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\Product\DataTable.js" />
+    <Content Include="Areas\jQueryDatatables\Scripts\Product\DataTable.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -1377,8 +1390,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\AngularJS\Models\" />
     <Folder Include="Areas\jQueryDatatables\Models\" />
-    <Folder Include="Areas\jQueryDatatables\Views\Shared\" />
     <Folder Include="Areas\PureMVC\Models\" />
     <Folder Include="Areas\PureMVC\Views\Shared\" />
   </ItemGroup>

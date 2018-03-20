@@ -1,0 +1,29 @@
+﻿@model IEnumerable<POC_Presentation_MVC.Models.ProductModel>
+<!--<div ng-controller="ProductListCtrl">-->
+    <h3>List of Products</h3>
+    <a class="btn btn-primary" href="#!/Create">Create New</a>
+    <br/><br />
+    Search:<input ng-model="query" type="text" />
+    <table class="table">
+        <tr>
+            <th><a href="" ng-click="sortField = 'Id'; reverse = !reverse">@Html.DisplayNameFor(model => model.Id)</a></th>
+            <th><a href="" ng-click="sortField = 'Name'; reverse = !reverse">@Html.DisplayNameFor(model => model.Name)</a></th>
+            <th><a href="" ng-click="sortField = 'Price'; reverse = !reverse">@Html.DisplayNameFor(model => model.Price)</a></th>
+            <th><a href="" ng-click="sortField = 'Quantity'; reverse = !reverse">@Html.DisplayNameFor(model => model.Quantity)</a></th>
+            <th><a href="" ng-click="sortField = 'CreationDate'; reverse = !reverse">@Html.DisplayNameFor(model => model.CreationDate)</a></th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="p in products  | filter:query | orderBy:sortField:reverse">
+            <td>{{p.Id}}</td>
+            <td>{{p.Name}}</td>
+            <td>{{p.Price | currency}}</td>
+            <td>{{p.Quantity | number}}</td>
+            <td>{{UTIL.toJsDate(p.CreationDate) | date:'yyyy-MM-dd'}}</td>
+            <td>
+                <a class="btn btn-info" href="#!/Read/{{p.Id}}">Details</a>
+                <a class="btn btn-warning" href="#!/Update/{{p.Id}}">Edit</a>
+                <a class="btn btn-danger" href="#!/Delete/{{p.Id}}">Delete</a>
+            </td>
+        </tr>
+    </table>
+<!--</div>-->
