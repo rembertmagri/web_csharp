@@ -199,7 +199,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\AngularJS\Controllers\ProductController.cs" />
     <Compile Include="Areas\AngularJS\AngularJSAreaRegistration.cs" />
-    <Compile Include="Areas\jQueryDatatables\Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Areas\jQueryDatatables\jQueryDatatablesAreaRegistration.cs" />
     <Compile Include="Areas\PureMVC\Controllers\ProductController.cs" />
     <Compile Include="Areas\PureMVC\PureMVCAreaRegistration.cs" />

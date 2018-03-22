@@ -8,10 +8,15 @@
         $scope.product.CreationDate = new Date();
         console.log($scope.product);
         productsService.update($scope.product, function (result) {
-            if ("Ok" == result.data) {
+            if (result.data.Valid) {
                 $location.path('/');
             } else {
-                //TODO: error
+                var errormsg = "";
+                var keys = Object.keys(result.data.Errors);
+                for (var i = 0; i < keys.length; i++) {
+                    errormsg = errormsg + ' ' + result.data.Errors[keys[i]][0].ErrorMessage;
+                }
+                alert(errormsg);
             }
             console.log(result);
         });

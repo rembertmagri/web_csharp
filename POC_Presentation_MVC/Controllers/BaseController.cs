@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace POC_Presentation_MVC.Areas.jQueryDatatables.Controllers
+namespace POC_Presentation_MVC.Controllers
 {
     public class BaseController : Controller
     {

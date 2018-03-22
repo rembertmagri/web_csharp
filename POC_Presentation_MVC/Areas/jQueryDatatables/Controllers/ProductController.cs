@@ -1,4 +1,5 @@
 ﻿using POC_Common;
+using POC_Presentation_MVC.Controllers;
 using POC_Presentation_MVC.Models;
 using POC_Presentation_MVC.ProductServiceReference;
 using POC_Presentation_MVC.Utils;
@@ -42,15 +43,10 @@ namespace POC_Presentation_MVC.Areas.jQueryDatatables.Controllers
         [HttpPost]
         public JsonResult Create(ProductModel product)
         {
-            // The TryUpdateModel will use data annotation to validate
-            // the data passed over from the client. If any validation
-            // fails, the error will be written to the "ModelState".
-            var valid = TryValidateModel(product);
-            
             var errors = new Dictionary<string, object>();
             try
             {
-                if (valid)
+                if (ModelState.IsValid)
                 {
                     ProductDTO productDTO = MVCModelToDTOUtil.ToProductDTOMap(product);
                     bool result = productServiceClient.create(productDTO);
@@ -71,7 +67,7 @@ namespace POC_Presentation_MVC.Areas.jQueryDatatables.Controllers
             }
             return Json(new
             {
-                Valid = valid,
+                Valid = ModelState.IsValid,
                 Errors = errors
             });
 
@@ -102,15 +98,10 @@ namespace POC_Presentation_MVC.Areas.jQueryDatatables.Controllers
         [HttpPost]
         public JsonResult Update(ProductModel product)
         {
-            // The TryUpdateModel will use data annotation to validate
-            // the data passed over from the client. If any validation
-            // fails, the error will be written to the "ModelState".
-            var valid = TryValidateModel(product);
-
             var errors = new Dictionary<string, object>();
             try
             {
-                if (valid)
+                if (ModelState.IsValid)
                 {
                     ProductDTO productDTO = MVCModelToDTOUtil.ToProductDTOMap(product);
                     bool result = productServiceClient.update(productDTO);
@@ -130,7 +121,7 @@ namespace POC_Presentation_MVC.Areas.jQueryDatatables.Controllers
             }
             return Json(new
             {
-                Valid = valid,
+                Valid = ModelState.IsValid,
                 Errors = errors
             });
         }

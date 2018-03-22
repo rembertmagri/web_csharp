@@ -1,4 +1,5 @@
 ﻿using POC_Common;
+using POC_Presentation_MVC.Controllers;
 using POC_Presentation_MVC.Models;
 using POC_Presentation_MVC.ProductServiceReference;
 using POC_Presentation_MVC.Utils;
@@ -13,7 +14,7 @@ using System.Web.Mvc;
 
 namespace POC_Presentation_MVC.Areas.AngularJS.Controllers
 {
-    public class ProductController : Controller
+    public class ProductController : BaseController
     {
         private ProductServiceClient productServiceClient = new ProductServiceClient();
         
@@ -59,6 +60,98 @@ namespace POC_Presentation_MVC.Areas.AngularJS.Controllers
             }
             return PartialView("_Read", productModel);
         }
+        
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return PartialView("_Create");
+        }
+
+        [HttpPost]
+        public JsonResult Create(ProductModel product)
+        {
+            var errors = new Dictionary<string, object>();
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    ProductDTO productDTO = MVCModelToDTOUtil.ToProductDTOMap(product);
+                    bool result = productServiceClient.create(productDTO);
+                    if (!result)
+                    {
+                        errors.Add("service", "error");
+                    }
+
+                }
+                else
+                {
+                    errors = GetErrorsFromModelState();
+                }
+            }
+            catch (Exception e)
+            {
+                errors.Add("exception", e.Message);
+            }
+            return Json(new
+            {
+                Valid = ModelState.IsValid,
+                Errors = errors
+            });
+
+        }
+        
+        [HttpGet]
+        public ActionResult Update(int? id)
+        {
+            ProductModel productModel = getProductModelById(id);
+            if (productModel == null)
+            {
+                //TODO: display error
+            }
+            return PartialView("_Update", productModel);
+        }
+
+        [HttpPost]
+        public JsonResult Update(ProductModel product)
+        {
+            var errors = new Dictionary<string, object>();
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    ProductDTO productDTO = MVCModelToDTOUtil.ToProductDTOMap(product);
+                    bool result = productServiceClient.update(productDTO);
+                    if (!result)
+                    {
+                        errors.Add("service", "error");
+                    }
+                }
+                else
+                {
+                    errors = GetErrorsFromModelState();
+                }
+            }
+            catch (Exception e)
+            {
+                errors.Add("exception", e.Message);
+            }
+            return Json(new
+            {
+                Valid = ModelState.IsValid,
+                Errors = errors
+            });
+        }
+        
+        [HttpGet]
+        public ActionResult Delete(int? id)
+        {
+            ProductModel productModel = getProductModelById(id);
+            if (productModel == null)
+            {
+                //TODO: display error
+            }
+            return PartialView("_Delete", productModel);
+        }
 
         [HttpPost]
         public JsonResult Delete(int id)
@@ -78,84 +171,6 @@ namespace POC_Presentation_MVC.Areas.AngularJS.Controllers
             }
         }
 
-        [HttpGet]
-        public ActionResult Create()
-        {
-            return PartialView("_Create");
-        }
-
-        [HttpPost]
-        public JsonResult Create(ProductModel product)
-        {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    ProductDTO productDTO = MVCModelToDTOUtil.ToProductDTOMap(product);
-                    bool result = productServiceClient.create(productDTO);
-                    if (result)
-                    {
-                        return Json("Ok");
-                    }
-
-                }
-                return Json("Error");
-            }
-            catch (Exception e)
-            {
-                return Json("Error");
-            }
-
-        }
-
-        
-        
-        [HttpGet]
-        public ActionResult Update(int? id)
-        {
-            ProductModel productModel = getProductModelById(id);
-            if (productModel == null)
-            {
-                //TODO: display error
-            }
-            return PartialView("_Update", productModel);
-        }
-
-        [HttpPost]
-        public JsonResult Update(ProductModel product)
-        {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    ProductDTO productDTO = MVCModelToDTOUtil.ToProductDTOMap(product);
-                    bool result = productServiceClient.update(productDTO);
-                    if (result)
-                    {
-                        return Json("Ok");
-                    }
-                }
-                return Json("Error");
-            }
-            catch (Exception e)
-            {
-                return Json("Error");
-            }
-        }
-        
-        [HttpGet]
-        public ActionResult Delete(int? id)
-        {
-            ProductModel productModel = getProductModelById(id);
-            if (productModel == null)
-            {
-                //TODO: display error
-            }
-            return PartialView("_Delete", productModel);
-        }
-
-        
-        
         private ProductModel getProductModelById(int? id)
         {
             if (!id.HasValue)

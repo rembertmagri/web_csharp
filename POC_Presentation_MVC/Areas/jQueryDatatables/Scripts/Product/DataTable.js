@@ -46,7 +46,7 @@ $(document).ready(function () {
                             dialog.dialog("close");
                             productsDataTable.draw(false);
                         } else {
-                            var errormsg;
+                            var errormsg = "";
                             $.each(data.Errors, function (key, value) {
                                 if (value != null) {
                                     errormsg = errormsg + ' ' + value[value.length - 1].ErrorMessage;
@@ -96,7 +96,7 @@ function ShowUpdateModal(id) {
                         dialog.dialog("close");
                         productsDataTable.draw(false);
                     } else {
-                        var errormsg;
+                        var errormsg= "";
                         $.each(data.Errors, function (key, value) {
                             if (value != null) {
                                 errormsg = errormsg + ' ' + value[value.length - 1].ErrorMessage;
