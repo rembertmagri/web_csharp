@@ -221,7 +221,13 @@
     <Compile Include="Utils\MVCModelToDTOUtil.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\AngularJS\Scripts\Product\products.js" />
+    <Content Include="Areas\AngularJS\Scripts\app\app.js" />
+    <Content Include="Areas\AngularJS\Scripts\app\controllers\ProductCreateCtrl.js" />
+    <Content Include="Areas\AngularJS\Scripts\app\controllers\ProductDelCtrl.js" />
+    <Content Include="Areas\AngularJS\Scripts\app\controllers\ProductFindCtrl.js" />
+    <Content Include="Areas\AngularJS\Scripts\app\controllers\ProductListCtrl.js" />
+    <Content Include="Areas\AngularJS\Scripts\app\controllers\ProductUpdateCtrl.js" />
+    <Content Include="Areas\AngularJS\Scripts\app\services\products.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\DataTables\css\autoFill.bootstrap.css" />
@@ -1365,6 +1371,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AngularJS\Models\" />
+    <Folder Include="Areas\AngularJS\Scripts\app\directives\" />
+    <Folder Include="Areas\AngularJS\Scripts\app\filters\" />
     <Folder Include="Areas\jQueryDatatables\Models\" />
     <Folder Include="Areas\jQueryDatatables\Views\Base\" />
     <Folder Include="Areas\PureMVC\Models\" />
