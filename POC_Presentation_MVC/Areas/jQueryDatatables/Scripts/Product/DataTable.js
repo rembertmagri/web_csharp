@@ -42,8 +42,18 @@ $(document).ready(function () {
             form = dialog.find("form").on("submit", function (event) {
                 event.preventDefault();
                 $.post('/jQueryDatatables/Product/Create', form.serialize(), function (data) {
-                        dialog.dialog("close");
-                        productsDataTable.draw(false);
+                        if (data.Valid) {
+                            dialog.dialog("close");
+                            productsDataTable.draw(false);
+                        } else {
+                            var errormsg;
+                            $.each(data.Errors, function (key, value) {
+                                if (value != null) {
+                                    errormsg = errormsg + ' ' + value[value.length - 1].ErrorMessage;
+                                }
+                            });
+                            alert(errormsg);
+                        }
                     },
                     'json');
             });
@@ -82,8 +92,18 @@ function ShowUpdateModal(id) {
         form = dialog.find("form").on("submit", function (event) {
             event.preventDefault();
             $.post('/jQueryDatatables/Product/Update', form.serialize(), function (data) {
-                    dialog.dialog("close");
-                    productsDataTable.draw(false);
+                    if (data.Valid) {
+                        dialog.dialog("close");
+                        productsDataTable.draw(false);
+                    } else {
+                        var errormsg;
+                        $.each(data.Errors, function (key, value) {
+                            if (value != null) {
+                                errormsg = errormsg + ' ' + value[value.length - 1].ErrorMessage;
+                            }
+                        });
+                        alert(errormsg);
+                    }
                 },
                 'json');
         });

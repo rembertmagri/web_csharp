@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - POC AngularJS jQuery MVC WCF EF</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/themes/base/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -18,18 +18,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("POC AngularJS jQuery MVC WCF EF", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home", new { Area = "" }, new { })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { Area = "" }, new { })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { Area = "" }, new { })</li>
                     <li>@Html.ActionLink("Products (Pure MVC)", "Index", "Product", new { Area = "PureMVC" }, new { })</li>
                     <li>@Html.ActionLink("Products (jQuery & Datatables)", "Index", "Product", new { Area = "jQueryDatatables" }, new { })</li>
                     <li>@Html.ActionLink("Products (AngularJS)", "Index", "Product", new { Area = "AngularJS" }, new { })</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+                @*@Html.Partial("_LoginPartial")*@
             </div>
         </div>
     </div>
@@ -37,7 +35,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - POC AngularJS jQuery MVC WCF EF</p>
         </footer>
     </div>
 

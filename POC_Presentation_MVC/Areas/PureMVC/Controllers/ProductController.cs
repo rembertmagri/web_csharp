@@ -31,6 +31,7 @@ namespace POC_Presentation_MVC.Areas.PureMVC.Controllers
         }
         
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(ProductModel product)
         {
             try
@@ -80,6 +81,7 @@ namespace POC_Presentation_MVC.Areas.PureMVC.Controllers
         }
         
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Update(ProductModel product)
         {
             try
@@ -120,24 +122,22 @@ namespace POC_Presentation_MVC.Areas.PureMVC.Controllers
         }
         
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Delete(ProductModel product)
         {
             try
             {
-                if (ModelState.IsValid)
+                
+                bool result = productServiceClient.delete(product.Id);
+                if (result)
                 {
-                    bool result = productServiceClient.delete(product.Id);
-                    if (result)
-                    {
-                        return RedirectToAction("Index");
-                    }
-                    else
-                    {
-                        //TODO: error
-                        return View();
-                    }
+                    return RedirectToAction("Index");
                 }
-                return View(product);
+                else
+                {
+                    //TODO: error
+                    return View();
+                }
             }
             catch (Exception e)
             {

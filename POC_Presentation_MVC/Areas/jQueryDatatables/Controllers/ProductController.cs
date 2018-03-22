@@ -13,7 +13,7 @@ using System.Web.Mvc;
 
 namespace POC_Presentation_MVC.Areas.jQueryDatatables.Controllers
 {
-    public class ProductController : Controller
+    public class ProductController : BaseController
     {
         private ProductServiceClient productServiceClient = new ProductServiceClient();
         
@@ -42,24 +42,38 @@ namespace POC_Presentation_MVC.Areas.jQueryDatatables.Controllers
         [HttpPost]
         public JsonResult Create(ProductModel product)
         {
+            // The TryUpdateModel will use data annotation to validate
+            // the data passed over from the client. If any validation
+            // fails, the error will be written to the "ModelState".
+            var valid = TryValidateModel(product);
+            
+            var errors = new Dictionary<string, object>();
             try
             {
-                if (ModelState.IsValid)
+                if (valid)
                 {
                     ProductDTO productDTO = MVCModelToDTOUtil.ToProductDTOMap(product);
                     bool result = productServiceClient.create(productDTO);
-                    if (result)
+                    if (!result)
                     {
-                        return Json("Ok");
+                        errors.Add("service","error");
                     }
 
                 }
-                return Json("Error");
+                else
+                {
+                    errors = GetErrorsFromModelState();
+                }
             }
             catch (Exception e)
             {
-                return Json("Error");
+                errors.Add("exception", e.Message);
             }
+            return Json(new
+            {
+                Valid = valid,
+                Errors = errors
+            });
 
         }
         
@@ -88,23 +102,37 @@ namespace POC_Presentation_MVC.Areas.jQueryDatatables.Controllers
         [HttpPost]
         public JsonResult Update(ProductModel product)
         {
+            // The TryUpdateModel will use data annotation to validate
+            // the data passed over from the client. If any validation
+            // fails, the error will be written to the "ModelState".
+            var valid = TryValidateModel(product);
+
+            var errors = new Dictionary<string, object>();
             try
             {
-                if (ModelState.IsValid)
+                if (valid)
                 {
                     ProductDTO productDTO = MVCModelToDTOUtil.ToProductDTOMap(product);
                     bool result = productServiceClient.update(productDTO);
-                    if (result)
+                    if (!result)
                     {
-                        return Json("Ok");
+                        errors.Add("service", "error");
                     }
                 }
-                return Json("Error");
+                else
+                {
+                    errors = GetErrorsFromModelState();
+                }
             }
             catch (Exception e)
             {
-                return Json("Error");
+                errors.Add("exception", e.Message);
             }
+            return Json(new
+            {
+                Valid = valid,
+                Errors = errors
+            });
         }
         
         [HttpGet]
@@ -123,13 +151,10 @@ namespace POC_Presentation_MVC.Areas.jQueryDatatables.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
+                bool result = productServiceClient.delete(id);
+                if (result)
                 {
-                    bool result = productServiceClient.delete(id);
-                    if (result)
-                    {
-                        return Json("Ok");
-                    }
+                    return Json("Ok");
                 }
                 return Json("Error");
             }

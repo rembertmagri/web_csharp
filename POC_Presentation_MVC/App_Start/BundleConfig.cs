@@ -12,7 +12,7 @@ namespace POC_Presentation_MVC
                         "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+                        "~/Scripts/jquery.validate.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery.datatables").Include(
                         "~/Scripts/DataTables/jquery.datatables.js"));

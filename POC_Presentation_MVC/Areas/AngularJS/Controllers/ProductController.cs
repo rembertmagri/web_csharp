@@ -65,13 +65,10 @@ namespace POC_Presentation_MVC.Areas.AngularJS.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
+                bool result = productServiceClient.delete(id);
+                if (result)
                 {
-                    bool result = productServiceClient.delete(id);
-                    if (result)
-                    {
-                        return Json("Ok");
-                    }
+                    return Json("Ok");
                 }
                 return Json("Error");
             }
