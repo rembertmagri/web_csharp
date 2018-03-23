@@ -8,8 +8,8 @@
    * Service  layer (WCF)
    * Presentation layer:
      * [Pure MVC](#pure-mvc-project)
-     * [MVC + jQuery and DataTables](#MVC-+-jQuery-+-Datatables)
-     * [MVC + AngularJS](#MVC-+-AngularJS)
+     * [MVC + jQuery and DataTables](#mvc--jquery--datatables)
+     * [MVC + AngularJS](#mvc--angularjs)
 
 ## Solution Structure and Layer Division
 > After creating the projects and setting their dependencies,
