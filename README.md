@@ -3,13 +3,13 @@
 ## Purpose
 > To create an MVC project on Visual Studio to run a simple CRUD web application using:
  * Multitier architecture:
-  * Data (Entity Framework)
-  * Business
-  * Service (WCF)
-  * Presentation:
-   * Pure MVC
-   * MVC + jQuery and DataTables
-   * MVC + AngularJS
+   * Data (Entity Framework)
+   * Business
+   * Service (WCF)
+   * Presentation:
+     * Pure MVC
+     * MVC + jQuery and DataTables
+     * MVC + AngularJS
 
 ## Step 0-0) Data Acquisition and Preparation
 > Every Machine should have at least 100GB HD
