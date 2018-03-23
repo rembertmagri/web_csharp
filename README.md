@@ -7,9 +7,9 @@
    * Business layer
    * Service  layer (WCF)
    * Presentation layer:
-     * Pure MVC
-     * MVC + jQuery and DataTables
-     * MVC + AngularJS
+     * [Pure MVC](#Step-2/)-Pure-MVC-project)
+     * [MVC + jQuery and DataTables]
+     * [MVC + AngularJS]
 
 ## Step 1) Solution Structure and Layer Division
 > After creating the projects and setting their dependencies,
