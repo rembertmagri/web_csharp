@@ -7,7 +7,7 @@
    * Business layer
    * Service  layer (WCF)
    * Presentation layer:
-     * [Pure MVC](#Pure-MVC-project)
+     * [Pure MVC](#pure-mvc-project)
      * [MVC + jQuery and DataTables](#MVC-+-jQuery-+-Datatables)
      * [MVC + AngularJS](#MVC-+-AngularJS)
 
