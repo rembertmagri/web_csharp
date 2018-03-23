@@ -7,11 +7,11 @@
    * Business layer
    * Service  layer (WCF)
    * Presentation layer:
-     * [Pure MVC](#Step-2-Pure-MVC-project)
-     * [MVC + jQuery and DataTables]
-     * [MVC + AngularJS]
+     * [Pure MVC](Pure-MVC-project)
+     * [MVC + jQuery and DataTables](#MVC-+-jQuery-+-Datatables)
+     * [MVC + AngularJS](#MVC-+-AngularJS)
 
-## Step 1: Solution Structure and Layer Division
+## Solution Structure and Layer Division
 > After creating the projects and setting their dependencies,
 ![](https://github.com/rembertmagri/web_csharp/blob/master/images/architecture%20code%20map.png?raw=true)
 
@@ -33,7 +33,7 @@ Useful references:
 * [Entity Framework](https://docs.microsoft.com/en-us/aspnet/entity-framework)
 * [Calling WCF Services and Entity Framework in ASP.NET MVC Application](https://www.youtube.com/watch?v=H6MzA1KW3o0)
 
-## Step 2: Pure MVC project
+## Pure MVC project
 
 > Text
 
@@ -42,7 +42,7 @@ Useful references:
 * [Introduction to ASP.NET MVC in C#: Basics, Advanced Topics, Tips, Tricks, Best Practices, and More](https://www.youtube.com/watch?v=phyV-OQNeRM)
 * [ASP.NET MVC 5 Step by Step: Part 3 Product Application Demo Project (CRUD Operation)](https://www.youtube.com/watch?v=NAKLrsvBC6g)
 
-## Step 3: MVC + jQuery and Datatables
+## MVC + jQuery + Datatables
 
 > Text
 
@@ -51,7 +51,7 @@ Useful references:
 * [jQueryUI](https://jqueryui.com/)
 * [DataTables](https://datatables.net/)
 
-## Step 4: MVC + AngularJS
+## MVC + AngularJS
 
 > Text
 
