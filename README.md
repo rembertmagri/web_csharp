@@ -17,7 +17,7 @@
     Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
 
 [Calling WCF Services and Entity Framework in ASP.NET MVC Application](https://www.youtube.com/watch?v=H6MzA1KW3o0)
-![](https://github.com/rembertmagri/web_csharp/blob/master/images/architecture code map.png.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/images/architecture code map.png.png?raw=true)
 
 > More text
 
