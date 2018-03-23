@@ -11,13 +11,26 @@
      * MVC + jQuery and DataTables
      * MVC + AngularJS
 
-## Step 1) Solution Structure and Layer division
-> mvc wcf entity framework example
+## Step 1) Solution Structure and Layer Division
+> After creating the projects and setting their dependencies,
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/architecture%20code%20map.png?raw=true)
+
+> the database and table were created and some rows were inserted.
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/database%20creation.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/table%20creation.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/table%20creation2.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/data%20creation.png?raw=true)
+
+> Then, the Entity Framework model was created:
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/ef%20model%20creation.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/ef%20model%20creation2.png?raw=true)
+
+> Connection string for the creation of the Entity Framework model (database first):
 
     Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
 
-[Calling WCF Services and Entity Framework in ASP.NET MVC Application](https://www.youtube.com/watch?v=H6MzA1KW3o0)
-![](https://github.com/rembertmagri/web_csharp/blob/master/images/architecture%20code%20map.png?raw=true)
+Useful references:
+* [Calling WCF Services and Entity Framework in ASP.NET MVC Application](https://www.youtube.com/watch?v=H6MzA1KW3o0)
 
 > More text
 
