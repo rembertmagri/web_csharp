@@ -1,11 +1,15 @@
-# C# .Net MVC - Proof of Concept project
+# C# ASP.NET MVC - Proof of Concept project
 
 ## Purpose
 > To create an MVC project on Visual Studio to run a simple CRUD web application using:
- * Layer separation (Data, Business, Service, Presentation)
- * Pure MVC
- * jQuery and DataTables
- * AngularJS
+ * Multitier architecture:
+  * Data (Entity Framework)
+  * Business
+  * Service (WCF)
+  * Presentation:
+   * Pure MVC
+   * MVC + jQuery and DataTables
+   * MVC + AngularJS
 
 ## Step 0-0) Data Acquisition and Preparation
 > Every Machine should have at least 100GB HD
