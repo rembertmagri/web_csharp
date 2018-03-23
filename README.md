@@ -3,22 +3,20 @@
 ## Purpose
 > To create an MVC project on Visual Studio to run a simple CRUD web application using:
  * Multitier architecture:
-   * Data (Entity Framework)
-   * Business
-   * Service (WCF)
-   * Presentation:
+   * Data layer (Entity Framework)
+   * Business layer
+   * Service  layer (WCF)
+   * Presentation layer:
      * Pure MVC
      * MVC + jQuery and DataTables
      * MVC + AngularJS
 
-## Step 0-0) Data Acquisition and Preparation
-> Every Machine should have at least 100GB HD
+## Step 1) Solution Structure and Layer division
+> mvc wcf entity framework example
 
-    wget -w 2 -m http://www.gutenberg-tar.com/gutenberg_txt.7z
-    sudo apt-get install p7zip-full
-    7za x gutenberg_txt.7z
-    tar -xvf gutenberg_txt.tar
+    Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
 
+[Calling WCF Services and Entity Framework in ASP.NET MVC Application](https://www.youtube.com/watch?v=H6MzA1KW3o0)
 ![](https://github.com/rembertmagri/bigdata-frameworks/blob/master/images/image001.png?raw=true)
 
 > Gutenberg repository (total uncompressed size of all files is about 35GB) consists of several text files (books), each one with some Mbytes. This kind of scenario is not ideal when using HDFS; it would be better to have a small number of larger files. Because of that, the files on each extracted directory were concatenated together using the following command:
