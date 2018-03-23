@@ -21,7 +21,7 @@
 
 > More text
 
-## Step2) Pure MVC project
+## Step 2) Pure MVC project
 
 > Text
 
@@ -29,11 +29,11 @@
 
 [ASP.NET MVC 5 Step by Step: Part 3 Product Application Demo Project (CRUD Operation)](https://www.youtube.com/watch?v=NAKLrsvBC6g)
 
-## Step3) MVC + jQuery and Datatables
+## Step 3) MVC + jQuery and Datatables
 
 > Text
 
-## Step4) MVC + AngularJS
+## Step 4) MVC + AngularJS
 
 > Text
 
