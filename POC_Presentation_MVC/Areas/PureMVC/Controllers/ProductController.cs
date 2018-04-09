@@ -15,7 +15,12 @@ namespace POC_Presentation_MVC.Areas.PureMVC.Controllers
 {
     public class ProductController : Controller
     {
-        private ProductServiceClient productServiceClient = new ProductServiceClient();
+        private IProductService productServiceClient;
+
+        public ProductController(IProductService productServiceClient)
+        {
+            this.productServiceClient = productServiceClient;
+        }
         
         public ActionResult Index()
         {

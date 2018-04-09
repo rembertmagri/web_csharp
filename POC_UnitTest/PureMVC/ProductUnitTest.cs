@@ -5,17 +5,21 @@ using System.Web.Mvc;
 using POC_Presentation_MVC.Models;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using POC_Presentation_MVC.ProductServiceReference;
+using POC_UnitTest.MockServices;
 
 namespace POC_UnitTest
 {
     [TestClass]
     public class ProductUnitTest
     {
+        private IProductService service = new MockProductService();
+
         [TestMethod]
         public void Index_Get_AsksForIndexView()
         {
             // Arrange
-            var controller = new ProductController();
+            var controller = new ProductController(service);
             // Act
             ViewResult result = controller.Index() as ViewResult;
             // Assert
@@ -26,7 +30,7 @@ namespace POC_UnitTest
         public void Index_Get_CheckModel()
         {
             // Arrange
-            var controller = new ProductController();
+            var controller = new ProductController(service);
             // Act
             ViewResult result = controller.Index() as ViewResult;
             // Assert
@@ -38,7 +42,7 @@ namespace POC_UnitTest
         public void Create_Get_AsksForIndexView()
         {
             // Arrange
-            var controller = new ProductController();
+            var controller = new ProductController(service);
             // Act
             ViewResult result = controller.Create() as ViewResult;
             // Assert
@@ -49,7 +53,7 @@ namespace POC_UnitTest
         public void Create_Post_InsertNewProductModelStateError()
         {
             // Arrange
-            var controller = new ProductController();
+            var controller = new ProductController(service);
             ProductModel product = new ProductModel();
             controller.ModelState.AddModelError("key", "error");
             // Act
