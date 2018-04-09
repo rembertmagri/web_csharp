@@ -21,13 +21,13 @@ namespace POC_Presentation_MVC.Areas.PureMVC.Controllers
         {
             var listProductDto = productServiceClient.findAll();
             List<ProductModel> model = listProductDto.Select(productDto => MVCModelToDTOUtil.ToProductModelMap(productDto)).ToList();
-            return View(model);
+            return View("Index", model);
         }
         
         [HttpGet]
         public ActionResult Create()
         {
-            return View();
+            return View("Create");
         }
         
         [HttpPost]
@@ -47,14 +47,14 @@ namespace POC_Presentation_MVC.Areas.PureMVC.Controllers
                     else
                     {
                         //TODO: error
-                        return View();
+                        return View("Create");
                     }
                 }
-                return View(product);
+                return View("Create", product);
             }
             catch(Exception e)
             {
-                return View();
+                return View("Create");
             }
         }
 
