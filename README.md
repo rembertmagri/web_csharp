@@ -37,7 +37,7 @@ Useful references:
 
 ## Pure MVC project
 
-> Text
+> For the pure MVC part of the project, the native components of MVC were heavily used, such as Html templates (Razor), views, partial views, layouts, navigation ruled by the controllers, etc. No specific javascript library was used.
 
 > List+CRUD
 ![](https://github.com/rembertmagri/web_csharp/blob/master/images/mvc_list.png?raw=true)
@@ -53,7 +53,7 @@ Useful references:
 
 ## MVC + jQuery + Datatables
 
-> Text
+> For the "MVC + jQuery + Datatables" part of the project, the main javascript library used were jQuery, Datatables and jQueryUI (for the modals). In this case, the main visual part of the 'logic' is concentrated in the script POC_Presentation_MVC\Areas\jQueryDatatables\Scripts\Product\DataTable.js.
 
 > List+CRUD
 ![](https://github.com/rembertmagri/web_csharp/blob/master/images/jquery_list.png?raw=true)
@@ -69,7 +69,7 @@ Useful references:
 
 ## MVC + AngularJS
 
-> Text
+> For the "MVC + AngularJS" part of the project, the main javascript library used was AngularJS. In this case, the main visual part of the 'logic' is concentrated in the scripts folder POC_Presentation_MVC\Areas\AngularJS\Scripts\app\.
 
 > List+CRUD
 ![](https://github.com/rembertmagri/web_csharp/blob/master/images/angular_list.png?raw=true)
