@@ -67,6 +67,13 @@ Useful references:
 Useful references:
 * [TDD - Test-Driven Development](https://msdn.microsoft.com/en-us/library/ff847525(v=vs.100).aspx)
 
+## Dependency Injection
+
+> Text
+
+Useful references:
+* [Dependency Injection with Unity](https://www.c-sharpcorner.com/article/dependency-injection-in-asp-net-mvc-5/)
+
 ## Conclusion
 
 This project demonstrated the differences when using MVC only to develop the presentation layer of a web application and when using some of the most popular javascript libraries, such as jQuery with Datatables and AngularJS.
