@@ -69,6 +69,15 @@ Useful references:
 > First, Unity was installed via NuGet:
 ![](https://github.com/rembertmagri/web_csharp/blob/master/images/unity_nuget.png?raw=true)
 
+> Then, UnityConfig class was created. This class is responsible for registering the interfaces of the services that will be used by the controllers (in their contructors). The binding is done automatically in runtime by the Unity.Mvc5 library.
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/unity_config.png?raw=true)
+
+> Finally, the Global.asax file was to be changed to include UnityConfig.RegisterComponents() method inside Application_Start.
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/unity_global_asax.png?raw=true)
+
+> The controller has to be changed to require the IProductService in the constructor. The service will be inseted by Unity (in production environment) or will be programmatically insered in the unit tests.
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/unity_controller.png?raw=true)
+
 Useful references:
 * [Dependency Injection with Unity](https://www.c-sharpcorner.com/article/dependency-injection-in-asp-net-mvc-5/)
 
