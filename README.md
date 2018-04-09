@@ -64,7 +64,7 @@ Useful references:
 
 ## Dependency Injection
 
-> To allow the execution of unit tests on each layer, the Unity library was added to the MVC project. Dependency injection allows the presentation layer (controllers) to use registered services in runtime, thus enabling the tester to easily decouple the service layer from the presentation layer and use a mock service to reduce the scope of the unit tests.
+> To allow the execution of unit tests on each layer, the Unity library was added to the MVC project. Dependency injection (aka Inversion of Control) allows the presentation layer (controllers) to use registered services in runtime, thus enabling the tester to easily decouple the service layer from the presentation layer and use a mock service to reduce the scope of the unit tests.
 
 > First, Unity was installed via NuGet:
 ![](https://github.com/rembertmagri/web_csharp/blob/master/images/unity_nuget.png?raw=true)
@@ -102,4 +102,4 @@ Useful references:
 
 ## Conclusion
 
-This project demonstrated the differences when using MVC only to develop the presentation layer of a web application and when using some of the most popular javascript libraries, such as jQuery with Datatables and AngularJS.
+This project demonstrated the differences when using MVC only to develop the presentation layer of a web application and when using some of the most popular javascript libraries, such as jQuery with Datatables and AngularJS. Additionally, some of the most common practices used in software development departments today were showcased, such as unit tests and dependency injection.
