@@ -39,6 +39,13 @@ Useful references:
 
 > Text
 
+> List+CRUD
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/mvc_list.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/mvc_create.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/mvc_read.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/mvc_update.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/mvc_delete.png?raw=true)
+
 Useful references:
 * [Learn About ASP.NET MVC](https://www.asp.net/mvc)
 * [Introduction to ASP.NET MVC in C#: Basics, Advanced Topics, Tips, Tricks, Best Practices, and More](https://www.youtube.com/watch?v=phyV-OQNeRM)
@@ -48,6 +55,13 @@ Useful references:
 
 > Text
 
+> List+CRUD
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/jquery_list.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/jquery_create.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/jquery_read.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/jquery_update.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/jquery_delete.png?raw=true)
+
 Useful references:
 * [jQuery](https://jquery.com/)
 * [jQueryUI](https://jqueryui.com/)
@@ -56,6 +70,13 @@ Useful references:
 ## MVC + AngularJS
 
 > Text
+
+> List+CRUD
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/angular_list.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/angular_create.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/angular_read.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/angular_update.png?raw=true)
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/angular_delete.png?raw=true)
 
 Useful references:
 * [AngularJS](https://angularjs.org/)
