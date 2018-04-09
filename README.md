@@ -83,7 +83,17 @@ Useful references:
 
 ## Unit Test
 
-> In order to approximate this project even further with a real-world scenario, a new project was created to allow the execution of unit tests and thus simulate a Test-Driven Development methodology, commonly used amongst IT departments in the industry today. POC_UnitTest project was created inside the solution, and references to 
+> In order to approximate this project even further with a real-world scenario, a new project was created to allow the execution of unit tests and thus simulate a Test-Driven Development methodology, commonly used amongst IT departments in the industry today. POC_UnitTest project was created inside the solution, and references the presentation layer project and to the Common library were added.
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/test_references.png?raw=true)
+
+> Then, a MockProductService implementing the IProductService was created. This is the mock service that would be used during the tests instead of using the real service implementation (WCF) injected by Unity.
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/test_mock.png?raw=true)
+
+> Finally, some unit tests were implemented using the 'AAA' unit test pattern (Arrange, Act, Assert).
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/test_impl.png?raw=true)
+
+> The results of the tests can be seen in the Test Explorer tab.
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/test_results.png?raw=true)
 
 Useful references:
 * [TDD - Test-Driven Development](https://msdn.microsoft.com/en-us/library/ff847525(v=vs.100).aspx)
