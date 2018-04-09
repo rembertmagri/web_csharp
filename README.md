@@ -1,7 +1,7 @@
 # C# ASP.NET MVC - Proof of Concept project
 
 ## Purpose
-> To create an MVC project on Visual Studio to run a simple CRUD web application using:
+> To create an solution on Visual Studio to run a simple CRUD web application using:
  * Multitier architecture:
    * Data layer (Entity Framework)
    * Business layer
@@ -62,19 +62,24 @@ Useful references:
 * [Introduction to AngularJS in 50 Examples - part 1](https://www.youtube.com/watch?v=TRrL5j3MIvo)
 * [Introduction to AngularJS in 50 Examples - part 2](https://www.youtube.com/watch?v=6J08m1H2BME)
 
+## Dependency Injection
+
+> To allow the execution of unit tests on each layer, Unity library was added to the MVC project. Dependency injection allows the presentation layer (controllers) to use registered services in runtime, thus enabling the tester to easily decouple the service layer fro the presentation layer, and use a mock service to reduce the sope of the unit tests.
+
+> First, Unity was installed via NuGet:
+![](https://github.com/rembertmagri/web_csharp/blob/master/images/unity_nuget.png?raw=true)
+
+Useful references:
+* [Dependency Injection with Unity](https://www.c-sharpcorner.com/article/dependency-injection-in-asp-net-mvc-5/)
+
 ## Unit Test
 
-> Text
+> In order to approximate this project even further with a real-world scenario, a new project was created to allow the execution of unit tests and thus simulate a Test-Driven Development methodology, commonly used amongst IT departments in the industry today. POC_UnitTest project was created inside the solution, and references to 
 
 Useful references:
 * [TDD - Test-Driven Development](https://msdn.microsoft.com/en-us/library/ff847525(v=vs.100).aspx)
 
-## Dependency Injection
 
-> Text
-
-Useful references:
-* [Dependency Injection with Unity](https://www.c-sharpcorner.com/article/dependency-injection-in-asp-net-mvc-5/)
 
 ## Conclusion
 
