@@ -10,6 +10,8 @@
      * [Pure MVC](#pure-mvc-project)
      * [MVC + jQuery and DataTables](#mvc--jquery--datatables)
      * [MVC + AngularJS](#mvc--angularjs)
+ * Test-Driven Development (TDD) with an example of Unit Test project for the presentation layer
+ * Dependency Injection (DI) with Unity to facilitate the unit test of each individual layer
 
 ## Solution Structure and Layer Division
 > After creating the projects and setting their dependencies,
