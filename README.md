@@ -1,7 +1,7 @@
 # C# ASP.NET MVC - Proof of Concept project
 
 ## Purpose
-> To create an solution on Visual Studio to run a simple CRUD web application using:
+> To create a solution on Visual Studio to run a simple CRUD web application using:
  * Multitier architecture:
    * Data layer (Entity Framework)
    * Business layer
