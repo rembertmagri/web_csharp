@@ -31,5 +31,6 @@ namespace POC_Presentation_MVC.Models
         [DisplayFormat(DataFormatString = "{0:d}")]
         [DataType(DataType.Date)]
         public DateTime? CreationDate { get; set; }
+
     }
 }
