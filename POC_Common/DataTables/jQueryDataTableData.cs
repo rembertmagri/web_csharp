@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace POC_Presentation_MVC.Utils.DataTables
+namespace POC_Common.DataTables
 {
     public class jQueryDataTableData<T>
     {

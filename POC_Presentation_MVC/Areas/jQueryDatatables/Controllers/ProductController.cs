@@ -1,9 +1,9 @@
 ﻿using POC_Common;
+using POC_Common.DataTables;
 using POC_Presentation_MVC.Controllers;
 using POC_Presentation_MVC.Models;
 using POC_Presentation_MVC.ProductServiceReference;
 using POC_Presentation_MVC.Utils;
-using POC_Presentation_MVC.Utils.DataTables;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,8 +30,8 @@ namespace POC_Presentation_MVC.Areas.jQueryDatatables.Controllers
         {
             ContainerDTO<ProductDTO> productContainerDto = productServiceClient.findAllPaged(param.start, param.length);
             List<ProductModel> data = productContainerDto.list.Select(productDto => MVCModelToDTOUtil.ToProductModelMap(productDto)).ToList();
-            jQueryDataTableData<ProductModel> dataTableresponse = new jQueryDataTableData<ProductModel>(param.draw, productContainerDto.total, data);
-            return Json(dataTableresponse, JsonRequestBehavior.AllowGet);
+            jQueryDataTableData<ProductModel> dataTableResponse = new jQueryDataTableData<ProductModel>(param.draw, productContainerDto.total, data);
+            return Json(dataTableResponse, JsonRequestBehavior.AllowGet);
         }
         
         [HttpGet]

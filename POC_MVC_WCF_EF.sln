@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC_Presentation_MVC", "POC_Presentation_MVC\POC_Presentation_MVC.csproj", "{92E0EDC0-05E3-4364-B478-20FECAE65BAF}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -19,6 +19,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC_UnitTest", "POC_UnitTest\POC_UnitTest.csproj", "{11B49564-734B-439C-8518-D4AF15A5330B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{9C09A07C-E0FA-4A20-8390-5EAB783E1804} = {9C09A07C-E0FA-4A20-8390-5EAB783E1804}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC_WebAPI", "POC_WebAPI\POC_WebAPI.csproj", "{0E876913-23E7-47CB-A58F-55259678D0F9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{13B7CAC4-C871-4D92-8D60-938D7C367A5F} = {13B7CAC4-C871-4D92-8D60-938D7C367A5F}
 	EndProjectSection
 EndProject
 Global
@@ -51,8 +56,15 @@ Global
 		{11B49564-734B-439C-8518-D4AF15A5330B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11B49564-734B-439C-8518-D4AF15A5330B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11B49564-734B-439C-8518-D4AF15A5330B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E876913-23E7-47CB-A58F-55259678D0F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E876913-23E7-47CB-A58F-55259678D0F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E876913-23E7-47CB-A58F-55259678D0F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E876913-23E7-47CB-A58F-55259678D0F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4F5115F-C78B-45E9-A130-3DFEFC61CD05}
 	EndGlobalSection
 EndGlobal

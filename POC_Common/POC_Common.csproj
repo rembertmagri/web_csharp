@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -112,6 +113,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContainerDTO.cs" />
+    <Compile Include="DataTables\jQueryDataTableData.cs" />
+    <Compile Include="DataTables\jQueryDataTableParamModel.cs" />
     <Compile Include="ProductDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

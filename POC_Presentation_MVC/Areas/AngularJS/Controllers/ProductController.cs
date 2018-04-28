@@ -3,7 +3,6 @@ using POC_Presentation_MVC.Controllers;
 using POC_Presentation_MVC.Models;
 using POC_Presentation_MVC.ProductServiceReference;
 using POC_Presentation_MVC.Utils;
-using POC_Presentation_MVC.Utils.DataTables;
 using System;
 using System.Collections.Generic;
 using System.Linq;
