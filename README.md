@@ -84,7 +84,7 @@ Useful references:
 * [Introduction to AngularJS in 50 Examples - part 1](https://www.youtube.com/watch?v=TRrL5j3MIvo)
 * [Introduction to AngularJS in 50 Examples - part 2](https://www.youtube.com/watch?v=6J08m1H2BME)
 
-## WebAPI + MVC + jQuery and DataTables
+## WebAPI + MVC + jQuery + DataTables
 
 > For the WebAPI part of the project, a new area was created in the Presentation project. The datatables javascript from the 'MVC + jQuery and DataTables' project was altered to call the CRUD method of the WebAPI project. The WebAPI project was created using .Net Core library.
 
