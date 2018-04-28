@@ -10,6 +10,7 @@
      * [Pure MVC](#pure-mvc-project)
      * [MVC + jQuery and DataTables](#mvc--jquery--datatables)
      * [MVC + AngularJS](#mvc--angularjs)
+     * [WebAPI + MVC + jQuery and DataTables](#webapi--mvc--jquery--datatables)
  * [Dependency Injection (DI)](#dependency-injection) with Unity to enable the decoupling of each individual layer
  * [Test-Driven Development (TDD)](#unit-test) with an example of Unit Test project for the presentation layer
 
@@ -82,6 +83,13 @@ Useful references:
 * [AngularJS](https://angularjs.org/)
 * [Introduction to AngularJS in 50 Examples - part 1](https://www.youtube.com/watch?v=TRrL5j3MIvo)
 * [Introduction to AngularJS in 50 Examples - part 2](https://www.youtube.com/watch?v=6J08m1H2BME)
+
+## WebAPI + MVC + jQuery and DataTables
+
+> For the WebAPI part of the project, a new area was created in the Presentation project. The datatables javascript from the 'MVC + jQuery and DataTables' project was altered to call the CRUD method of the WebAPI project. The WebAPI project was created using .Net Core library.
+
+Useful references:
+* [Create a Web API with ASP.NET Core and Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-2.1)
 
 ## Dependency Injection
 
