@@ -86,7 +86,7 @@ Useful references:
 
 ## WebAPI + MVC + jQuery + DataTables
 
-> For the WebAPI part of the project, a new area was created in the Presentation project. The datatables javascript from the 'MVC + jQuery and DataTables' project was altered to call the CRUD method of the WebAPI project. The WebAPI project was created using .Net Core library.
+> For the WebAPI part of the project, a new area was created in the Presentation project. The datatables javascript from the 'MVC + jQuery and DataTables' project was altered to call the CRUD methods from the WebAPI project. The WebAPI project was created using .Net Core library.
 
 Useful references:
 * [Create a Web API with ASP.NET Core and Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-2.1)
