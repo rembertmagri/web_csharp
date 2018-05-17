@@ -5,9 +5,6 @@ using POC_Presentation_MVC.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Helpers;
 using System.Web.Mvc;
 
 namespace POC_Presentation_MVC.Areas.PureMVC.Controllers
